@@ -1,0 +1,57 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.mis-puntos h2 {
+
+    margin-top: 5rem;
+
+}
+
+.totales {
+
+    .totales-kaizen {
+        margin-bottom: 5rem;
+        padding: 3rem;
+    }
+
+    @include m.tablet {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+}
+
+.canjes {
+
+    text-align: center;
+
+    .canjes-premio {
+        margin: 0 auto;
+        padding: 3rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.74);
+    }
+
+    @include m.tablet {
+        
+        @include m.grid(2, 2rem);
+        
+        .canjes-premio {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .canjes-premio-descripcion {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            gap: 2rem;
+        }
+    }
+
+
+}
+

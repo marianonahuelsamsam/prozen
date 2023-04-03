@@ -1,0 +1,91 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header h1 {
+
+    font-size: 2rem;
+
+    @include m.tablet {
+        font-size: 4rem;
+    }
+}
+
+.header {
+    padding: 2rem;
+    background-color: v.$azul;
+    
+    .header-logo {
+        color: v.$blanco;
+    }
+}
+
+.header-contenedor {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.header-navegacion {
+    display: flex;
+    align-items: center;
+    a {
+        margin-right: 1.2rem;
+    }
+    
+}
+
+.abrir-menu {
+    display: none;
+}
+
+.cerrar-menu {
+    display: none;
+}
+
+@media screen and (max-width: v.$tablet) {
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+        border: 0;
+        font-size: 3rem;
+        background-color: transparent;
+        cursor: pointer;
+
+    }
+
+    .header-navegacion {
+        display: none;
+        visibility: hidden;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: v.$azul;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+
+    }
+
+    .nav-visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 2rem;
+
+        a {
+            color: v.$blanco;
+        }
+    }
+}

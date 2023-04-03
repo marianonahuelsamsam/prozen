@@ -1,0 +1,19 @@
+{
+    "name": "maria/prozen",
+    "description": "Proyecto Privado Prozen",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "MVC\\": "./",
+            "Model\\": "./models",
+            "Controllers\\" : "./controllers"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mariano Nahuel Sam Sam",
+            "email": "marianonahuelsamsam@hotmail.com"
+        }
+    ],
+    "require": {}
+}

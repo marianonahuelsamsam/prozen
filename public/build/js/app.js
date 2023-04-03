@@ -1,0 +1,1 @@
+const navegacion=document.querySelector("#navegacion"),abrirMenu=document.querySelector("#abrir"),cerrarMenu=document.querySelector("#cerrar");abrirMenu.addEventListener("click",()=>{navegacion.classList.add("nav-visible")}),cerrarMenu.addEventListener("click",()=>{navegacion.classList.remove("nav-visible")});
